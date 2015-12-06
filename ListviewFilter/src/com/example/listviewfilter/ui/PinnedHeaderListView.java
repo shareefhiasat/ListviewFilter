@@ -236,7 +236,7 @@ public class PinnedHeaderListView extends ListView implements IIndexBarFilter {
     
 	@Override
 	public boolean onTouchEvent(MotionEvent ev) {
-		if (mIndexBarView != null && ((IndexBarView)mIndexBarView).onTouchEvent(ev)) {
+		if (mIndexBarView != null && (mIndexBarView).onTouchEvent(ev)) {
 		    setPreviewTextVisibility(true);
 			return true;	
 		}
