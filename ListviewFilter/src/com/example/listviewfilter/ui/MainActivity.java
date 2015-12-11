@@ -113,7 +113,7 @@ public class MainActivity extends Activity {
 				setIndexBarViewVisibility(constraint);
 			}
 		} else {
-			new Poplulate().execute(mItems);
+			new Populate().execute(mItems);
 		}
 	}
 
@@ -221,7 +221,7 @@ public class MainActivity extends Activity {
 			ArrayList<String> filtered = (ArrayList<String>) results.values;
 			setIndexBarViewVisibility(constraint.toString());
 			// sort array and extract sections in background Thread
-			new Poplulate().execute(filtered);
+			new Populate().execute(filtered);
 		}
 
 	}
@@ -237,7 +237,7 @@ public class MainActivity extends Activity {
 
 	// sort array and extract sections in background Thread here we use
 	// AsyncTask
-	private class Poplulate extends AsyncTask<ArrayList<String>, Void, Void> {
+	private class Populate extends AsyncTask<ArrayList<String>, Void, Void> {
 
 		private void showLoading(View contentView, View loadingView, View emptyView) {
 			contentView.setVisibility(View.GONE);
